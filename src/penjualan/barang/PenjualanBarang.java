@@ -45,20 +45,25 @@ public class PenjualanBarang {
             System.out.print("Jumlah        : ");
             jbarang[i] = input.nextInt();
 
-            if (kode[i].equals("A01")) {
-                nbarang[i] = "Hardisk";
-                harga[i] = 700000;
-                bayar[i] = harga[i] * jbarang[i];
-            } else if (kode[i].equals("B02")) {
-                nbarang[i] = "Monitor";
-                harga[i] = 800000;
-                bayar[i] = harga[i] * jbarang[i];
-            } else if (kode[i].equals("C03")) {
-                nbarang[i] = "Mouse";
-                harga[i] = 50000;
-                bayar[i] = harga[i] * jbarang[i];
-            } else {
-                System.out.println("\n\tError");
+            switch (kode[i]) {
+                case "A01":
+                    nbarang[i] = "Hardisk";
+                    harga[i] = 700000;
+                    bayar[i] = harga[i] * jbarang[i];
+                    break;
+                case "B02":
+                    nbarang[i] = "Monitor";
+                    harga[i] = 800000;
+                    bayar[i] = harga[i] * jbarang[i];
+                    break;
+                case "C03":
+                    nbarang[i] = "Mouse";
+                    harga[i] = 50000;
+                    bayar[i] = harga[i] * jbarang[i];
+                    break;
+                default:
+                    System.out.println("\n\tError");
+                    break;
             }
         }
 
