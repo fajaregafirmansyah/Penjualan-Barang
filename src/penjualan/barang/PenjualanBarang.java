@@ -49,7 +49,6 @@ public class PenjualanBarang {
                 nbarang[i] = "Hardisk";
                 harga[i] = 700000;
                 bayar[i] = harga[i] * jbarang[i];
-                kursIndonesia.setDecimalFormatSymbols(formatRp);
             } else if (kode[i].equals("B02")) {
                 nbarang[i] = "Monitor";
                 harga[i] = 800000;
